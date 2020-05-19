@@ -1,0 +1,32 @@
+:root{      /* Document's root element (usually <html>) */
+    --page-theme:#000;       /* Double colons indicate the use of variables */
+}
+
+header#top_section{
+    min-height: 100vh;
+}
+
+.greeting{
+    font-family:monospace;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.welcome-message{
+    text-align: center;
+    line-height: 2;     /* Keeps the line content at the vertical middle position */
+    font-family: monospace;
+}
+
+.top-back {
+    overflow: hidden;
+}
+
+.top-back .top-background-split{
+    height: 50vh;
+    background-color: var(--page-theme);
+    /* transform: skewY(-10deg) translateY(25%); transform: rotateZ(-10deg); */
+    transform: skewY(-10deg);
+    transform-origin: right;
+}
