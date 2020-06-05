@@ -103,6 +103,11 @@ header#top_section{
     text-align: justify;
 }
 
+.content .content-body-main{
+    padding: .25em;
+    z-index: 1;
+}
+
 @media (max-width:575px), print{
     .content .content-head .content-pre-head{
         display: none !important;
@@ -126,6 +131,32 @@ header#top_section{
     width: fit-content;
     display: block;
     margin: auto;
+}
+
+.name-card-box table.name-card-contents tbody:hover {
+    box-shadow: 0px 0px 0px 2px var(--page-theme);
+}
+
+.image-thumbnail-holder{
+    width: fit-content;
+    height: fit-content;
+    max-width: 200px;
+    padding: .5em;
+    border-radius: 5px;
+    display: grid;
+    display: flow-root;
+    background: whitesmoke;
+}
+
+.image-thumbnail-holder > img{
+    width: 100%;
+}
+
+.qualification-part{
+    margin-left: 10% !important;
+    padding-left: 10%;
+    padding-right: .5em;
+    border-left: 2px solid !important;
 }
 
 .social-links{
