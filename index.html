@@ -1,172 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>My Page</title>
+    <head>
+        <!-- Page Title -->
+        <title>My Page</title>
 
-    <!-- Including Add-ON Toolkits -->
-    <!-- Compiled and minified Materialize CSS and JavaScript -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Bootstrap 4.5.0 CSS and JS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Metadata (data about page data) about character encoding -->
+        <meta charset="UTF-8">    
+        <!-- Letting browser know website is to be scaled 1x by default to look good on all screens -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+        <!-- Setting Page Theme Color, some browsers use it to change tab color accordingly -->
+        <meta name="theme-color" content="#000">
+        <!-- Setting Page Description -->
+        <meta name="description" content="My Personal Website">
 
-    <!-- Using Google Fonts, if failed to load via script will throw an error in console -->
-    <link href="https://fonts.googleapis.com/css2?family=Noticia%20Text&family=Text+Me+One" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Play&display=swap');
-    </style>    
+        <!-- Including Add-ON Toolkits -->
+        <!-- Compiled and minified Materialize CSS and JavaScript -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Bootstrap 4.5.0 CSS and JS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Also includable: Tailwind CSS, Foundation (https://get.foundation: comes in foundation for sites as well as foundation for emails) -->
 
-    <!-- Font Awesome (Free Version) - Imported using Registered Kit via official CDN, using official CDN -->
-    <script src="https://kit.fontawesome.com/256e304746.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"> < !-- Renders Icons as Webfonts [Facing Error with social media icons] -->
-    <!-- <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN" crossorigin="anonymous"></script> < !-- Renders Icons as SVGs [Facing Error with social media icons] -->
+        <!-- Using Google Fonts, if failed to load via script will throw an error in console -->
+        <link href="https://fonts.googleapis.com/css2?family=Noticia%20Text&family=Text+Me+One" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Play&display=swap');
+        </style>    
 
-    <!-- Material Icons, compatible with materialize.css -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Font Awesome (Free Version) - Imported using Registered Kit via official CDN, using official CDN -->
+        <script src="https://kit.fontawesome.com/256e304746.js" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"> < !-- Renders Icons as Webfonts [Facing Error with social media icons] -->
+        <!-- <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN" crossorigin="anonymous"></script> < !-- Renders Icons as SVGs [Facing Error with social media icons] -->
 
-    <!-- Animation Libraries Includable Suggestions -->
-    <!-- * WOW.js
-         * Animate.css
-         * Animista
-         * Anime.js
-         * Motion UI (Sass Library)
-                    -->
-</head>
+        <!-- Material Icons, compatible with materialize.css -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<body>
+        <!-- Animation Libraries Includable Suggestions -->
+        <!-- * WOW.js
+            * Animate.css
+            * Animista
+            * Anime.js
+            * Motion UI (Sass Library)
+                        -->
 
-    <nav class="nav nav-wrapper navbar-nav fixed-top navbar-dark bg-dark">
-        <a class="brand-logo" href="#">HG</a>
-        <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down ml-auto">
-            <li><a href="/">Home</a></li>
-        </ul>
-        <ul class="sidenav" id="mobile-sidebar">
-            <li><a href="/">Home</a></li>
-        </ul>
-    </nav>
+        <!-- Page Specific CSS -->
+        <link rel="stylesheet" href="uploads/css/index-stylesheet.css" />
+    </head>
 
-    <header id="top_section">
-        <h1 class="greeting display-3">Hello <wbr/> World<wbr/>Wide<wbr/>Web!</h1>
-        <p class="welcome-message">You are cheerfully welcome to this page!</p>
-        <div class="top-back">
-            <div class="top-background-split"></div>
-        </div>
-    </header>
+    <body>
 
-    <!-- To Update: Name (with Photo (on left), Subtitle:Tech. Lover, Designation:Engineer, ...) --> 
-    <div class="name-card content">
-        <div class="content-head">
-            <h4 class="name-head-content">I am </h4><wbr/>&nbsp;<h1 class="name name-head-content"> Harshit <wbr> Kumar <wbr> Gupta </h1>
-        </div>
-        <div class="content-box name-card-box">
-            <!-- <img src="" alt="Harshit Gupta" />
-            <ul class="name-card-contents">
-                <li>Technology Lover</li>
-                <li><strong>Designation:</strong> Engineer</li>
-            </ul> -->
-            <table class="name-card-contents">
-                <tbody>
-                    <tr>
-                        <td rowspan="5">
-                            <div class="image-thumbnail-holder">
-                                <img src="./uploads/images/HKG.jpg" alt="Harshit Gupta" align="right"/>
-                            </div>
-                        </td>
-                        <th>Technology Enthusiast</th>
-                    </tr>
-                    <tr>
-                        <td> <strong>Designation:</strong> Engineer </td>
-                    </tr>
-                    <tr>
-                        <td> <strong>Current Location:</strong> Indore, Madhya Pradesh, India </td>
-                    </tr>
-                    <!-- <tr>
-                        <td> <strong>Highest Degree:</strong> B. Tech. </td>
-                    </tr> -->
-                </tbody>
-            </table>
-        </div>
-    </div>
+        <nav class="nav nav-wrapper navbar-nav fixed-top navbar-dark bg-dark">
+            <a class="brand-logo" href="#">HG</a>
+            <a data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down ml-auto">
+                <li><a href="/">Home</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-sidebar">
+                <li><a href="/">Home</a></li>
+                <!-- <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <div class="d-inline-block social-links">
+                        <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" data-toggle="tooltip" title="GitHub"><i class="fa fa-github"></i></a>
+                        <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" data-toggle="tooltip" title="Mail">
+                            <i class="material-icons">mail_outline</i>
+                        </a>
+                    </div>        
+                </li> -->
+            </ul>
+        </nav>
 
-    <div class="content about-content">
-        <!-- Any good content that should be added in -->
-        <div class="content-head">
-            <span class="content-pre-head"><small>starting with &nbsp;</small></span><h2 class="head-content">About Me</h2>
-        </div>
-        <p class="content-body">I am a programmer and developer, and I love to code and build things in my desired way. I love to program, and have been gaining more experience and control over the programming languages and tools. I am passionate and enthusiastic about using programming as a language to command and interact with machine.</p>
-    </div>
-
-    <!-- To Add: Any Projects (Optional), Feedback Form (maybe on a dedicated page), ... --> <!-- More to come -->
-    <div class="content educational-background">
-        <div class="content-head">
-            <span class="content-pre-head"><small>surfing on &nbsp;</small></span><h2 class="head-content">My Educational Qualification</h2>
-        </div>
-        <!-- To be displayed as a timeline, with a line of navigation -->
-        <div class="content-body-main">
-            <div class="qualification-part">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Bachelor of Technology (B. Tech.) in Electronics and Instrumentation Engineering</h4>
-                        <h5 class="card-title"><i class="material-icons">account_balance</i>Shri G. S. Institute of Technology and Science, Indore (2018-2022)</h5>
-                        <p class="card-text">Pursuing my Bachelor of Technology in Electronics and Instrumentation from here. My Expected Graduation is in 2022.</p>
-                    </div>                
+        <header id="top_section">
+            <h1 class="greeting display-3">Hello <wbr/> World<wbr/>Wide<wbr/>Web!</h1>
+            <p class="welcome-message">You are cheerfully welcome to this page!</p>
+            <div class="top-back">
+                <div class="top-background-split"></div>
+                <div class="scroll-more-indicator">
+                    <i class="fas fa-angle-double-down"></i>
+                    <!-- <h6 class="d-inline">Scroll Down to see more</h6> -->
                 </div>
             </div>
-            <div class="qualification-part">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">High School, 10+2 in PCM + CS</h4>
-                        <h5 class="card-title"><i class="material-icons">account_balance</i>St. Norbert Senior Secondary School, Indore (2006-2018)</h5>
-                        <p class="card-text">Completed my schooling from here. Studied PCM + CS (Physics, Chemistry and Mathematics, with English, and Computer Science as elective subject) in classes XI and XII.</p>
+        </header>
+
+        <!-- To Update: Name (with Photo (on left), Subtitle:Tech. Lover, Designation:Engineer, ...) --> 
+        <div class="name-card content">
+            <div class="content-head">
+                <h4 class="name-head-content">I am </h4><wbr/>&nbsp;<h1 class="name name-head-content"> Harshit <wbr> Kumar <wbr> Gupta </h1>
+            </div>
+            <div class="content-box name-card-box">
+                <table class="name-card-contents">
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">
+                                <div class="image-thumbnail-holder">
+                                    <img src="./uploads/images/HKG.jpg" alt="Harshit Gupta" align="right"/>
+                                </div>
+                            </td>
+                            <th>Technology Enthusiast</th>
+                        </tr>
+                        <tr>
+                            <td> <strong>Designation:</strong> Engineer </td>
+                        </tr>
+                        <tr>
+                            <td> <strong>Date of Birth (D.O.B.):</strong> 14-Dec-2000 </td>
+                        </tr>
+                        <tr>
+                            <td> <strong>Current Location:</strong> Indore, Madhya Pradesh, India </td>
+                        </tr>
+                        <!-- <tr>
+                            <td> <strong>Highest Degree:</strong> B. Tech. </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- About Me section -->
+        <div class="content about-content">
+            <!-- Any good content that should be added in -->
+            <div class="content-head">
+                <span class="content-pre-head"><small>starting with &nbsp;</small></span><h2 class="head-content">About Me</h2>
+            </div>
+            <p class="content-body">
+                <span>I am a programmer and developer, and I love to code and build things in my desired way. I love to program, and have been
+                gaining more experience and control over the programming languages and tools. I am passionate and enthusiastic about
+                using programming as a language to command and interact with machine.</span>
+                <br/><br/>
+                <a href="#" class="accordion expand-content" style="display: none;">Read More ...</a>
+                <span class="text-reveal">
+                    When I am not performing, I enjoy surfing internet and listening music, in my free time. I often get fascinated by
+                    dreaming and exploring big. I prefer keeping myself balanced and motivated.
+                </span>
+            </p>
+        </div>
+
+        <!-- To Add: Any Projects (Optional), My Quotations carousel, Feedback Form (maybe on a dedicated page), About Page (to be done on a separate page), ... --> <!-- More to come -->
+        <!-- Educational Qualification section -->
+        <div class="content educational-background">
+            <div class="content-head">
+                <span class="content-pre-head"><small>surfing on &nbsp;</small></span><h2 class="head-content">My Educational Qualification</h2>
+            </div>
+            <!-- To be displayed as a timeline, with a line of navigation -->
+            <div class="content-body-main">
+                <div class="qualification-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Bachelor of Technology (B. Tech.) in Electronics and Instrumentation Engineering</h4>
+                            <h5 class="card-title"><i class="fas fa-university fa-sm"></i>&nbsp;Shri G. S. Institute of Technology and Science, Indore (2018-2022)</h5>
+                            <p class="card-text">Pursuing my Bachelor of Technology in Electronics and Instrumentation Engineering from here. My Expected Graduation is in 2022.</p>
+                        </div>                
+                    </div>
+                </div>
+                <div class="qualification-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">High School, 10+2 in PCM + CS</h4>
+                            <h5 class="card-title"><i class="fas fa-school fa-xs"></i>&nbsp;St. Norbert Senior Secondary School, Indore (2006-2018)</h5>
+                            <p class="card-text">Completed my schooling from here. Studied PCM + CS (Physics, Chemistry and Mathematics, with English, and Computer Science as elective subject) in classes XI and XII.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="content skillset">
-        <div class="content-head">
-            <span class="content-pre-head"><small>continuing with &nbsp;</small></span><h2 class="head-content">My Skills</h2>
+        <!-- My Skills section -->
+        <div class="content skillset">
+            <div class="content-head">
+                <span class="content-pre-head"><small>continuing with &nbsp;</small></span><h2 class="head-content">My Skills</h2>
+            </div>
+            <div class="content-body-main">
+                <p class="content-body">My Skillset includes, but is definitely not limited to, the following tags:</p>
+                <!-- Relies on Chips feature of Materialize v1 -->
+                <div class="chips chips-initial chips-placeholder chips-autocomplete"></div>
+            </div>
         </div>
-        <div class="content-body-main">
-            <p class="content-body">My Skillset includes, but is definitely not limited to, the following tags:</p>
-            <!-- Relies on Chips feature of Materialize v1 -->
-            <div class="chips chips-initial chips-placeholder chips-autocomplete"></div>
+
+        <!-- My Quotes -->
+        <div class="content self-quotes">
+            <div class="content-head">
+                <span class="content-pre-head"><small>checking up&nbsp;</small></span><h2 class="head-content">My Quotes</h2>
+            </div>
+            <div class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target=".carousel.slide" data-slide-to="0" class="active"></li>
+                    <li data-target=".carousel.slide" data-slide-to="1"></li>
+                    <li data-target=".carousel.slide" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="quote-view">
+                            <p>Longer Leaps in a go often cause some essentials to get skipped. Consider devoting atleast the time required to every step, and later you will have firm initials to move upon. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="quote-view">
+                            <p>Keep your major focus on your tasks, your deeds that you either aim or wish for. Be ready to go on working day-and-night for it. Rest will come.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="quote-view">
+                            <p>I don't know if the world is more, I just know I am no less.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href=".carousel.slide" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href=".carousel.slide" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
         </div>
-    </div>
 
-    <DIV class="content social-links">
-        <span>
-            <span>Connect with me:</span>
-            <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank"><i class="fa fa-github"></i></a>
-            <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com">
-                <i class="material-icons">mail_outline</i><!-- <i class="fa far fa-envelope"></i> -->
-            </a>
-        </span>
-    </DIV>
+        <!-- Social Links share -->
+        <DIV class="content social-links">
+            <div class="d-inline-block">
+                <span>Connect with me:</span>
+                <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" title="GitHub" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github"></i></a>
+                <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" title="LinkedIn" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin"></i></a>
+                <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" title="Mail" data-toggle="tooltip" data-placement="right">
+                    <i class="material-icons">mail_outline</i><!-- <i class="fa far fa-envelope"></i> -->
+                </a>
+            </div>
+        </DIV>
 
-    <footer class="site-footer">
-        Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
-    </footer>
+        <footer class="site-footer">
+            Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
+        </footer>
 
-    <a href="#top" tabindex="-1">
-        <div class="back-to-top" tabindex="-1">
-			<i class="fas fa-space-shuttle fa-2x fa-rotate-270"></i>
-			<small class="option-indicator-label">Back to Top</small>
-        </div>
-    </a>
+        <!-- Back to Top (fixed option) -->
+        <a href="#top" tabindex="-1">
+            <div class="back-to-top">
+                <i class="fas fa-space-shuttle fa-2x fa-rotate-270"></i>
+                <small class="option-indicator-label">Back to Top</small>
+            </div>
+        </a>
 
-    <script src="script.js"></script>
+        <!-- Page Specfic JS File -->
+        <script src="uploads/js/index-script.js"></script>
 
-</body>
+    </body>
 
 </html>
