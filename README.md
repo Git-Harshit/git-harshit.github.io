@@ -1,5 +1,6 @@
 # My Website
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Git-Harshit/git-harshit.github.io)
+![GitHub](https://img.shields.io/github/license/Git-Harshit/git-harshit.github.io)
 
 _My Web Site_ is solely created to provide a simple website interface from me, that features my information and gets viewers to have a good amount of insight upon me as a reliable human. 
 
