@@ -1,0 +1,138 @@
+html, body{
+    scroll-behavior: smooth;
+    max-width: 100%;
+    font-family: "Play", "Noticia Text", "Text Me One";
+}
+
+/* Document's root element (usually <html>) */
+:root{
+    --page-theme:#000;            /* Double hyphens (as property name prefix) indicate the use of variables */
+}
+
+/* Styling User Selection */
+::selection, ::-moz-selection{
+    background-color: #000;
+    background-color: var(--page-theme);
+    color:#fff;
+    /* mix-blend-mode: difference;
+    background-blend-mode: difference; */
+}
+
+nav{
+    position: -webkit-sticky !important;    /* Useful for getting sticky position in Safari Browser */
+    position: sticky !important;
+    top:0;
+}
+
+nav .brand-logo, 
+nav .brand-logo:hover,
+nav .brand-logo:active,
+nav .brand-logo:focus, 
+.material-icons, 
+img[src*="HKG.jpg"],    /* img tags with src attribte containing 'HKG.jpg' */
+br {
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /* pointer-events: none; */
+}
+
+nav ul a{
+    /* pointer-events: none; */
+    text-decoration: none;
+}
+
+nav .social-links {
+    display: flexbox;
+    display: flow-root;
+    display: flex;
+    justify-content: space-around;
+    margin: .5em auto;
+}
+
+nav .social-links > a.social-link > i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul.right a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-links{
+    text-align: center;
+}
+
+.social-links .social-link{
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #00000099;
+    color: white;
+    border-radius: 50%;
+    font-size: larger;
+    vertical-align: middle;
+    /* text-align: center; */
+    /* cursor: pointer; */
+    text-decoration: none;
+    /* display: -webkit-inline-box; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.social-links .social-link:focus{
+    outline: none;
+    box-shadow: 0 0 0 .15em #00000080;
+}
+
+.social-link#link-github{
+    background-color: black;
+}
+.social-link#link-github:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.social-link#link-github:active{
+    background: radial-gradient(circle farthest-corner at bottom, gray, black);
+}
+.social-link#link-linkedin{
+    background-color: blue;
+}
+.social-link#link-linkedin:hover{
+    background-color: #0f0fdb;
+}
+.social-link#link-linkedin:focus{
+    box-shadow: 0 0 0 .15em #0000ff80;
+}
+.social-links #link-linkedin.social-link:active{
+    background-color: darkblue;
+    background: radial-gradient(circle farthest-side at 0% 90%, blue, darkblue);
+}
+.social-link#link-mail{
+    background-color: teal;
+}
+.social-link#link-mail:hover{
+    color: lightskyblue;
+}
+.social-link#link-mail:active{
+    background: linear-gradient(45deg turquoise, teal);
+}
+.social-link#link-mail:focus{
+    box-shadow: 0 0 0 .15em rgba(0, 128, 128, 0.45);
+}
+
+.page-footer{
+    color: #000;
+    background-color: transparent;
+}
+
+.page-footer .footer-copyright{
+    margin-top: 2em;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    font-size: .75em;
+    /* color: black; */
+    /* background-color: transparent; */
+}

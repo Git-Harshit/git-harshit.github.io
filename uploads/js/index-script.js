@@ -9,6 +9,18 @@ try{
         window.scroll(0, top_portion.offsetHeight); 
     }
 
+    // Setting a Read More option within "About Me" section
+    let Read_More_Toggle = document.querySelector(".expand-content");
+    Read_More_Toggle.style.cssText = "";
+    Read_More_Toggle.onclick = () => {
+        if (Read_More_Toggle.style.cssText === "display:none;"){
+            Read_More_Toggle.style.cssText = "";
+        }
+        else {
+            Read_More_Toggle.style.cssText = "display:none;";
+        }
+    }
+
     // Handling window onscroll events (using jQuery)
     $(window).scroll(function(){
         // Back-to-Top option to be kept hidden when at the top of page
@@ -25,24 +37,11 @@ try{
         }
     });
 
-    window.addEventListener('load', () => {
-        // To be replaced with a loader
-        // alert("Page Loaded!");
-        console.log("Webpage Loading Complete!");
-    });
-
-    // M.AutoInit();        // Initialising all materialize css elements in one go
-
-    // Materialize CSS Sidenav initialiser (for small screens)
+    // Materialize CSS Chips (used for Skills Tags) Initialiser
+        // using Vanilla JS
     document.addEventListener('DOMContentLoaded', function() {
-        let elems = document.querySelectorAll('.sidenav');
-        let options = {};
-        let instances = M.Sidenav.init(elems, options);
-
-        // Materialize CSS Chips (used for Skills Tags) Initialiser
-            // using Vanilla JS
-        elems = document.querySelectorAll('.chips');
-        options = {
+        let elems = document.querySelectorAll('.chips');
+        let options = {
             limit:Infinity,
             data: [{
                 tag: 'Web Development',}, { tag: 'Python Programming',}, 
@@ -68,37 +67,11 @@ try{
                 }
             },
         }
-        instances = M.Chips.init(elems, options);
-
-        // Initialising Materialise Carousel
-            // using JavaScript [Fails!]
-        // elems = document.querySelectorAll('.carousel');
-        // options = {
-        //     fullWidth: true,
-        //     indicators: true,
-        //     duration: 500
-        // };
-        // instances = M.Carousel.init(elems, options);
-            
-            // Materialize Chips using jQuery [Fails!]
-        // $('.chips').chips({
-        //     limit:Infinity,
-        //     data: [{
-        //         tag: 'Web Development',}, { tag: 'C Programming',}, { tag: 'Python Programming',
-        //       }],
-        //     placeholder: 'Enter a skill',
-        //     secondaryPlaceholder: '+ Type in to add more skills',
-        // });
-
-            // Materialize Carousels using jQuery [Fails!]
-        // $('.carousel.carousel-slider').carousel({
-        //     fullWidth: true,
-        //     indicators: true,
-        //     duration: 500
+        let instances = M.Chips.init(elems, options);
 
     });
 
-    // Adding Quotation Marks for Carousel Slider 
+    // Adding Quotation Marks for Quotes in Carousel Slider 
     let _quotes = document.querySelectorAll(".self-quotes .quote-view p");  // Selecting all p tags in .quote-view class elements of .self-quotes class element
     for (let quoteIndex=0; quoteIndex<_quotes.length; quoteIndex++){
         _quotes[quoteIndex].innerText = "\"" + ((_quotes[quoteIndex].innerText[0]==" ")?"":" ") + _quotes[quoteIndex].innerText + ((_quotes[quoteIndex].innerText[_quotes[quoteIndex].innerText.length-1]==" ")?"":" ") + "\""
@@ -111,16 +84,14 @@ try{
 
 	// Setting back_to_top space-shuttles animation with CSS and JS
 	back_to_top.onclick = ()=>{
-		back_to_top.querySelector("i.fa-space-shuttle").style.animation="launch-and-settle .75s";
+        back_to_top.querySelector("i.fa-space-shuttle").style.animation="launch-and-settle .75s";
+        window.scrollTo(0, 0);
 		// setTimeout(clearHash, 1000);
     };
     
-    // Clear the console (on successfully loading page JS)
-    console.clear();
-
 }
 
 catch(err){
     // Error-Handling Error-Free JS
-    console.log("Unable to load Esummit.js Completely! Error:", err.message, ". [ In detail:",  err, ". ]\nYou may face some performance limitations of this page.");
+    console.log("Unable to load index-script.js completely! Error:", err.message, ". [ In detail:",  err, ". ]\nYou may face some performance limitations of this page.");
 }

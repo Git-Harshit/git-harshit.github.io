@@ -13,6 +13,8 @@
         <meta name="theme-color" content="#000">
         <!-- Setting Page Description -->
         <meta name="description" content="My Personal Website">
+        <!-- Setting Page Icon -->
+        <link rel="icon" href="uploads/images/HKG.jpg" type="image" sizes="16x16 32X32" />
 
         <!-- Including Add-ON Toolkits -->
         <!-- Compiled and minified Materialize CSS and JavaScript -->
@@ -47,32 +49,34 @@
             * Motion UI (Sass Library)
                         -->
 
+        <!-- Common CSS file for all webpages -->
+        <link rel="stylesheet" href="uploads/css/common-stylesheet.css" />
         <!-- Page Specific CSS -->
         <link rel="stylesheet" href="uploads/css/index-stylesheet.css" />
     </head>
 
     <body>
 
-        <nav class="nav nav-wrapper navbar-nav fixed-top navbar-dark bg-dark">
-            <a class="brand-logo" href="#">HG</a>
+        <nav class="nav nav-wrapper navbar-nav sticky-top navbar-dark bg-dark">
+            <a class="brand-logo">HG</a>
             <a data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down ml-auto">
                 <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <ul class="sidenav" id="mobile-sidebar">
                 <li><a href="/">Home</a></li>
-                <!-- <li>
+                <li><a href="about.html">About</a></li>
+                <li>
                     <div class="divider"></div>
                 </li>
                 <li>
-                    <div class="d-inline-block social-links">
+                    <div class="social-links">
                         <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" data-toggle="tooltip" title="GitHub"><i class="fa fa-github"></i></a>
                         <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                        <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" data-toggle="tooltip" title="Mail">
-                            <i class="material-icons">mail_outline</i>
-                        </a>
-                    </div>        
-                </li> -->
+                        <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" data-toggle="tooltip" title="Mail"><i class="fa far fa-envelope"></i></a>
+                    </div>
+                </li>
             </ul>
         </nav>
 
@@ -130,13 +134,17 @@
             <p class="content-body">
                 <span>I am a programmer and developer, and I love to code and build things in my desired way. I love to program, and have been
                 gaining more experience and control over the programming languages and tools. I am passionate and enthusiastic about
-                using programming as a language to command and interact with machine.</span>
+                using programming as a language to command and interact with machines.</span>
                 <br/><br/>
-                <a href="#" class="accordion expand-content" style="display: none;">Read More ...</a>
-                <span class="text-reveal">
+                <span class="collapse text-reveal">
+                    With every programming language I learn, I get to acquire some better understanding over the utilities and
+                    customizations the programming can offer, and also often depict the similarities and variants in the usage of different
+                    syntaxes to acquire a task, or to run through an algorithm.
+                    <br/><br/>
                     When I am not performing, I enjoy surfing internet and listening music, in my free time. I often get fascinated by
                     dreaming and exploring big. I prefer keeping myself balanced and motivated.
                 </span>
+                <a href="#" class="expand-content" data-toggle="collapse" data-target=".text-reveal" style="display: none;">Read More ...</a>
             </p>
         </div>
 
@@ -191,6 +199,8 @@
                     <li data-target=".carousel.slide" data-slide-to="0" class="active"></li>
                     <li data-target=".carousel.slide" data-slide-to="1"></li>
                     <li data-target=".carousel.slide" data-slide-to="2"></li>
+                    <li data-target=".carousel.slide" data-slide-to="3"></li>
+                    <li data-target=".carousel.slide" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -206,6 +216,16 @@
                     <div class="carousel-item">
                         <div class="quote-view">
                             <p>I don't know if the world is more, I just know I am no less.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="quote-view">
+                            <p>Any possible deed has either already happened or may happen any day, it is better to be prepared accordingly.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="quote-view">
+                            <p>Manipulations are often irrelevant or misleading, and should not be adhered to. With manipulations, you might get convinced over a problem, but loose your concepts on the way.</p>
                         </div>
                     </div>
                 </div>
@@ -230,18 +250,29 @@
             </div>
         </DIV>
 
-        <footer class="site-footer">
-            Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
+        <!-- Back to Top (fixed option) -->
+        <!-- <a href="#top" tabindex="-1"> -->
+        <div class="back-to-top">
+            <i class="fas fa-space-shuttle fa-2x fa-rotate-270"></i>
+            <small class="option-indicator-label">Back to Top</small>
+        </div>
+        <!-- </a> -->
+
+        <footer class="footer page-footer site-footer">
+            <div class="text-center">
+                Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
+            </div>
+            <div class="footer-copyright bg-dark">
+                <div class="container">
+                    This site is maintained and published by <a href="https://github.com/Git-Harshit">Harshit Gupta.</a>
+                    <a class="grey-text text-lighten-4 right" href="https://github.com/Git-Harshit/git-harshit.github.io/blob/master/LICENSE">| License |</a>&nbsp;
+                    <a class="grey-text text-lighten-4 right" href="#top">| Back to Top |</a>
+                </div>
+            </div>
         </footer>
 
-        <!-- Back to Top (fixed option) -->
-        <a href="#top" tabindex="-1">
-            <div class="back-to-top">
-                <i class="fas fa-space-shuttle fa-2x fa-rotate-270"></i>
-                <small class="option-indicator-label">Back to Top</small>
-            </div>
-        </a>
-
+        <!-- Linking common JS file, programmed for all pages in this project -->
+        <script src="uploads/js/common-script.js"></script>
         <!-- Page Specfic JS File -->
         <script src="uploads/js/index-script.js"></script>
 

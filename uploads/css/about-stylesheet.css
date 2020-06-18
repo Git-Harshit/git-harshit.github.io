@@ -1,0 +1,41 @@
+.content{
+    margin: 1em auto;
+}
+
+.content:nth-of-type(1){
+    margin-top: 2em;
+}
+
+.content .content-header, .content .content-subheader {
+    text-align: center;
+    margin: .5em auto;
+}
+
+.content .content-subheader {
+    text-decoration: dashed underline;
+}
+
+p.body-content{
+    text-align: justify;
+    padding: 1rem;
+    font-family: "Text Me One";
+}
+
+.buttons-toCheck-list{
+    text-align: center;
+    margin: auto;
+}
+
+a.third-party-link:hover, a.third-party-link:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+span.URL_Box{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.page-footer{
+    background: transparent;
+}
