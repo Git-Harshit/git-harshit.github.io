@@ -1,0 +1,35 @@
+body{
+    font-family: "Play", "Noticia Text", "Text Me One";
+}
+
+/* Main Heading */
+.main-head {
+    margin: 1em auto;
+}
+
+/* Pre-info Modal */
+.modal {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width:575px) {
+    .modal {
+        width: 80%;
+    }
+
+    body.modal-open .modal {
+        overflow-y: hidden;
+    }
+}
+
+/* Feedback main Form */
+form {
+    margin: 1em auto;
+}
+
+textarea#message {
+    min-height: 5rem;
+    background: transparent;
+    /* border: 0; */
+}

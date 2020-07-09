@@ -1,4 +1,8 @@
 try{
+
+    // Using 'strict mode' to get silent errors, as opposed to default "sloppy mode"
+    "use strict";
+
     // Declaring some of the variables
     let top_portion = document.querySelector("#top_section");
     let back_to_top = document.querySelector(".back-to-top");
@@ -13,7 +17,7 @@ try{
     let Read_More_Toggle = document.querySelector(".expand-content");
     Read_More_Toggle.style.cssText = "";
     Read_More_Toggle.onclick = () => {
-        if (Read_More_Toggle.style.cssText === "display:none;"){
+        if (Read_More_Toggle.style.cssText === "display:none;" || Read_More_Toggle.style.cssText === "display: none;"){
             Read_More_Toggle.style.cssText = "";
         }
         else {
@@ -21,10 +25,22 @@ try{
         }
     }
 
+    // Expanding About Section by virtually clicking "Read More..." option on selecting About Me section once
+    let About_Me$content = document.querySelector(".content.about-content .content-body");
+    let clickable = 1;
+    (function aboutMe_clickHandler () {
+        About_Me$content.onclick = function () {        // function(), unlike ()=> {Arrow Function}, has bindings like for 'this', 'arguments', 'super', or 'new.target' keywords
+            if (clickable) {
+                clickable = false;
+                this.querySelector("a.expand-content").click();  // Clicking "Read More..." button virtually with JavaScript
+            }
+        }
+    })();       // Immediately Invoked Function Expression (IIFE)
+
     // Handling window onscroll events (using jQuery)
     $(window).scroll(function(){
         // Back-to-Top option to be kept hidden when at the top of page
-        if (window.outerHeight > window.outerWidth){
+        if (window.outerHeight > window.outerWidth){        // .outerHeight > outerWidth signals Portrait screen
             $checkpoint_division = 2;
         }
         else{

@@ -1,3 +1,7 @@
+body{
+    font-family: "Play", "Noticia Text", "Text Me One";
+}
+
 .content{
     margin: 1em auto;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 
     <head>
+
         <!-- Page Title -->
         <title>My Page</title>
 
@@ -42,7 +43,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <!-- Animation Libraries Includable Suggestions -->
-        <!-- * WOW.js
+        <!-- 
+            * WOW.js
             * Animate.css
             * Animista
             * Anime.js
@@ -53,6 +55,15 @@
         <link rel="stylesheet" href="uploads/css/common-stylesheet.css" />
         <!-- Page Specific CSS -->
         <link rel="stylesheet" href="uploads/css/index-stylesheet.css" />
+
+        <!-- Back-end Includables -->
+        <!-- 
+            * MongoDB
+            * FireBase
+            * Node.js
+            * Meteor.js
+         -->
+
     </head>
 
     <body>
@@ -61,25 +72,30 @@
             <a class="brand-logo">HG</a>
             <a data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down ml-auto">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="/">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="feedback.html">Feedback</a></li>
             </ul>
-            <ul class="sidenav" id="mobile-sidebar">
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                <li>
-                    <div class="social-links">
-                        <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" data-toggle="tooltip" title="GitHub"><i class="fa fa-github"></i></a>
-                        <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-                        <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" data-toggle="tooltip" title="Mail"><i class="fa far fa-envelope"></i></a>
-                    </div>
-                </li>
-            </ul>
+            <div class="sidenav" id="mobile-sidebar">
+                <ul>
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <li class="nav-item"><a href="feedback.html">Feedback</a></li>
+                    <li class="nav-item">
+                        <div class="divider"></div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="social-links">
+                            <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                            <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" title="Mail"><i class="fa far fa-envelope"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
+        <!-- Top Section (part) of page -->
         <header id="top_section">
             <h1 class="greeting display-3">Hello <wbr/> World<wbr/>Wide<wbr/>Web!</h1>
             <p class="welcome-message">You are cheerfully welcome to this page!</p>
@@ -92,7 +108,7 @@
             </div>
         </header>
 
-        <!-- To Update: Name (with Photo (on left), Subtitle:Tech. Lover, Designation:Engineer, ...) --> 
+        <!-- My ID Content: Name (with Photo (on left), Subtitle, Designation, ...) --> 
         <div class="name-card content">
             <div class="content-head">
                 <h4 class="name-head-content">I am </h4><wbr/>&nbsp;<h1 class="name name-head-content"> Harshit <wbr> Kumar <wbr> Gupta </h1>
@@ -141,14 +157,15 @@
                     customizations the programming can offer, and also often depict the similarities and variants in the usage of different
                     syntaxes to acquire a task, or to run through an algorithm.
                     <br/><br/>
-                    When I am not performing, I enjoy surfing internet and listening music, in my free time. I often get fascinated by
-                    dreaming and exploring big. I prefer keeping myself balanced and motivated.
+                    When I am not performing, I enjoy surfing internet and listening music, in my free time. I prefer
+                    dreaming and exploring, and keeping myself balanced and motivated.
                 </span>
                 <a href="#" class="expand-content" data-toggle="collapse" data-target=".text-reveal" style="display: none;">Read More ...</a>
             </p>
         </div>
 
-        <!-- To Add: Any Projects (Optional), My Quotations carousel, Feedback Form (maybe on a dedicated page), About Page (to be done on a separate page), ... --> <!-- More to come -->
+        <!-- To Add: Any Projects (Optional), Feedback Form (maybe on a dedicated page), ... --> <!-- More to come -->
+
         <!-- Educational Qualification section -->
         <div class="content educational-background">
             <div class="content-head">
@@ -194,7 +211,7 @@
             <div class="content-head">
                 <span class="content-pre-head"><small>checking up&nbsp;</small></span><h2 class="head-content">My Quotes</h2>
             </div>
-            <div class="carousel slide">
+            <div class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target=".carousel.slide" data-slide-to="0" class="active"></li>
                     <li data-target=".carousel.slide" data-slide-to="1"></li>
@@ -205,7 +222,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="quote-view">
-                            <p>Longer Leaps in a go often cause some essentials to get skipped. Consider devoting atleast the time required to every step, and later you will have firm initials to move upon. </p>
+                            <p>Longer Leaps in a go can cause some essentials to get skipped. Consider devoting atleast the time required for every step, and later you will have firm initials to move upon. </p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -251,12 +268,10 @@
         </DIV>
 
         <!-- Back to Top (fixed option) -->
-        <!-- <a href="#top" tabindex="-1"> -->
         <div class="back-to-top">
             <i class="fas fa-space-shuttle fa-2x fa-rotate-270"></i>
             <small class="option-indicator-label">Back to Top</small>
         </div>
-        <!-- </a> -->
 
         <footer class="footer page-footer site-footer">
             <div class="text-center">

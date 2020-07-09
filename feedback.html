@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- Page Title -->
+        <title>My Page</title>
+
+        <!-- Metadata (data about page data) about character encoding -->
+        <meta charset="UTF-8">    
+        <!-- Letting browser know website is scalable and to be scaled 1x by default to look good on all screens -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+        <!-- Setting Page Theme Color, some browsers use it to change tab color accordingly -->
+        <meta name="theme-color" content="#000">
+        <!-- Setting Page Description -->
+        <meta name="description" content="My Personal Website">
+        <!-- Setting Page Icon -->
+        <!-- <link rel="icon" href="uploads/images/HKG.jpg" type="image" sizes="16x16 32X32" /> -->
+
+        <!-- Compiled and minified Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Bootstrap 4.5.0 CSS and JS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Common CSS file for all webpages -->
+        <link rel="stylesheet" href="uploads/css/common-stylesheet.css" />
+
+    </head>
+
+    <body>
+
+        <nav class="nav nav-wrapper navbar-nav sticky-top navbar-dark bg-dark">
+            <section class="container-fluid">
+                <a class="brand-logo">HG</a>
+                <a data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down ml-auto">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <!-- <li class="nav-item"><a href="#">Feedback</a></li> -->
+                </ul>
+                <div class="sidenav" id="mobile-sidebar">
+                    <ul>
+                        <li class="nav-item"><a href="/">Home</a></li>
+                        <li class="nav-item"><a href="about.html">About</a></li>
+                        <li class="nav-item"><a href="#feedback.html">Feedback</a></li>
+                        <li class="nav-item">
+                            <div class="divider"></div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="social-links">
+                                <a class="social-link" id="link-github" href="https://github.com/Git-Harshit" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
+                                <a class="social-link" id="link-linkedin" href="https://www.linkedin.com/in/harshit-gupta-" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                <a class="social-link" id="link-mail" href="mailto:askharshitgupta@gmaill.com" title="Mail"><i class="fa far fa-envelope"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <!-- To-do: Main content here (a form atleast is essential), Note: for tech. critics/suggestions, go to github [link to issues page] -->
+        <header>
+            <div class="main-head">
+                <h1 class="text-center">Feedback Form<!-- <span class="d-none d-md-inline"> Form</span> --></h1>
+            </div>
+        </header>
+        
+        <!-- Pre-note. Currently appearing as a modal, may be set out at an intro paragraph if content expands in future -->
+        <!-- <section class="modal modal-fixed-footer fade">
+            < !-- <div class="modal-dialog modal-dialog-centered">
+                <article class="modal-header">
+                    < !-- Heading Content (with close &times; button) here -- >
+                </article>
+                <article class="modal-body">
+                    < !-- Body Content (with pre-instructions and our message) here -- >
+                </article>
+                <article class="modal-footer">
+                    < !-- Footer Content (with close button) here -- >
+                </article>
+            </div> -- >
+            <article class="modal-header">
+                <h4>Note</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </article>
+            <article class="modal-content">
+                <p>Thank you for considering taking out your precious time to share your feedback with me. I'd be happy to have your honest review/opinion or anything you'd like to convey, and I'll definitely look into it. Please also note that for any technical complaints or bug reports, you can also check for any existing report or open a new issue at its GitHub repository.</p>
+            </article>
+            <article class="modal-footer">
+                <button class="modal-close waves-effect waves-blue-grey btn-flat">Close</button>
+            </article>
+        </section> -->
+
+        <!-- Main Form -->
+        <div class="content form container-fluid">
+            <form action="#" method="POST" id="FeedbackForm">
+                <section class="row">
+                    <div class="col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email">E-Mail Address</label>
+                        <input type="email" id="email" placeholder="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone">Contact Number</label>
+                        <input type="number" id="phone" placeholder="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone2">Alternate Contact Number</label>
+                        <input type="number" id="phone2" placeholder="">
+                    </div>
+                    <div class="col-12"> 
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="">
+                    </div>
+                    <div class="col-12">
+                        <label for="phone2">Message</label>
+                        <textarea name="Message" id="message" cols="30" rows="10" placeholder="Feel free to mention it as per your choice!"></textarea>
+                    </div>
+                </section>
+                <button type="submit" class="btn d-block m-auto">Submit</button>
+            </form>
+        </div>
+
+        <footer class="footer page-footer site-footer">
+            <!-- <div class="text-center">
+                Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
+            </div> -->
+            <div class="footer-copyright bg-dark">
+                <div class="container">
+                    This site is maintained and published by <a href="https://github.com/Git-Harshit">Harshit Gupta.</a>
+                    <a class="grey-text text-lighten-4 right" href="https://github.com/Git-Harshit/git-harshit.github.io/blob/master/LICENSE">| License |</a>&nbsp;
+                    <a class="grey-text text-lighten-4 right" href="#top">| Back to Top |</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Page Specific CSS -->
+        <link rel="stylesheet" href="uploads/css/feedback-stylesheet.css" /> 
+
+        <!-- Using Google Fonts, if failed to load via script will throw an error in console -->
+        <link href="https://fonts.googleapis.com/css2?family=Noticia%20Text&family=Text+Me+One" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Play&display=swap');
+        </style>    
+
+        <!-- Material Icons, compatible with materialize.css -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Font Awesome (Free Version) - Imported using Registered Kit via official CDN, using official CDN -->
+        <script src="https://kit.fontawesome.com/256e304746.js" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"> < !-- Renders Icons as Webfonts [Facing Error with social media icons] -->
+        <!-- <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" integrity="sha384-ujbKXb9V3HdK7jcWL6kHL1c+2Lj4MR4Gkjl7UtwpSHg/ClpViddK9TI7yU53frPN" crossorigin="anonymous"></script> < !-- Renders Icons as SVGs [Facing Error with social media icons] -->
+
+        <!-- Including Add-ON Toolkits -->
+        <!-- Compiled and minified Materialize JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- jQuery, Popper and Bootstrap 4.5.0 JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+        <!-- Linking common JS file, programmed for all pages in this project -->
+        <script src="uploads/js/common-script.js"></script>
+        <!-- Page Specfic JS File -->
+        <script src="uploads/js/feedback-script.js"></script>
+
+    </body>
+
+</html>

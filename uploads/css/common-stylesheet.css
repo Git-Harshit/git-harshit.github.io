@@ -1,7 +1,10 @@
 html, body{
     scroll-behavior: smooth;
     max-width: 100%;
-    font-family: "Play", "Noticia Text", "Text Me One";
+}
+
+body {
+    font-family: "Play", "Noticia Text", "Raleway", "Text Me One";
 }
 
 /* Document's root element (usually <html>) */
@@ -10,12 +13,18 @@ html, body{
 }
 
 /* Styling User Selection */
-::selection, ::-moz-selection{
+::selection {
     background-color: #000;
     background-color: var(--page-theme);
     color:#fff;
     /* mix-blend-mode: difference;
     background-blend-mode: difference; */
+}
+/* Styling User Selection (for Mozilla Browser(s)) !Alert: It can't be combined with comma-separated selector with above ::selection styling */
+::-moz-selection {
+    background-color: #000;
+    background-color: var(--page-theme);
+    color:#fff;
 }
 
 nav{
@@ -121,6 +130,34 @@ nav ul.right a:hover{
 }
 .social-link#link-mail:focus{
     box-shadow: 0 0 0 .15em rgba(0, 128, 128, 0.45);
+}
+
+.back-to-top{
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	/* font-size: 2em; */
+	opacity: 80%;
+    color: black;
+	color: var(--page-theme);
+    /* mix-blend-mode: difference; */   /* Causing issue with z-index */
+	z-index: 5;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+}
+
+.back-to-top > small.option-indicator-label{
+	font-size: x-small;
+    user-select: none;
+    /* visibility: visible; */
+    opacity: 0.6;
+}
+
+.back-to-top:hover > small.option-indicator-label{
+    /* visibility: visible; */
+    opacity: 1;
 }
 
 .page-footer{
