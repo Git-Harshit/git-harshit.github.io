@@ -4,7 +4,7 @@ body{
 
 /* Main Heading */
 .main-head {
-    margin: 1em auto;
+    margin: 3em auto;
 }
 
 /* Pre-info Modal */
@@ -32,4 +32,11 @@ textarea#message {
     min-height: 5rem;
     background: transparent;
     /* border: 0; */
+    padding: .25em;
+}
+
+@media (max-width:575px) {
+    textarea#message {
+        min-height: 10rem;
+    }
 }

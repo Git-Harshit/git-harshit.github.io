@@ -57,8 +57,6 @@ try{
             entry_counts++;
         }
         else {
-            // delete dataObject["name"];
-            // dataObject["name"] = "Not Provided!";
             dataObject.name = "Anonymous";
         }
         if (form.email.value != "") {
@@ -92,23 +90,37 @@ try{
             delete dataObject["message"];
         }
 
-        // console.log("Updated Values:", dataObject);
-
         if (entry_counts===0) {
             console.log("Nothing Entered into database!");
-            return;
+            return 0;
         }
 
+        // Loading non-empty Data into firebase
         firebase.database().ref("response").push().set(dataObject);
         
+        // console.log("Updated Values:", dataObject);
+        return 1;
+
     }
 
     // Pushing form data on clicking submit button
     if (myForm) {
         myForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            firebaseDataLogger(myForm);
-            alert("Thank You for your valuable feedback! It'll be looked into, for sure!");
+            isLogged = firebaseDataLogger(myForm);
+            if (isLogged) {
+                alert("Thank You for your valuable feedback! It'll be looked into, for sure!");
+                // location.reload();  // Not Refreshing the webpage to instantly clear field logs! [Idea Dropped, with Reason: Instant Reload is preventing data submission to Google FireBase, atleast on slower to mid-speed networks]
+
+                // Clearing the individual fields after form submission
+                myForm.name.value     = "" ;
+                myForm.email.value    = "" ;
+                myForm.phone.value    = "" ;
+                myForm.phone2.value   = "" ;
+                myForm.subject.value  = "" ;
+                myForm.message.value  = "" ;
+        
+            }
         } );
     }
 

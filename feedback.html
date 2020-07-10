@@ -106,11 +106,11 @@
                     </div>
                     <div class="col-md-6">
                         <label for="phone">Contact Number</label>
-                        <input type="number" id="phone" placeholder="">
+                        <input type="number" id="phone" min="1000000000" max="9999999999" placeholder="">
                     </div>
                     <div class="col-md-6">
                         <label for="phone2">Alternate Contact Number</label>
-                        <input type="number" id="phone2" placeholder="">
+                        <input type="number" id="phone2" min="1000000000" max="9999999999" placeholder="">
                     </div>
                     <div class="col-12"> 
                         <label for="subject">Subject</label>
@@ -121,7 +121,7 @@
                         <textarea name="Message" id="message" cols="30" rows="10" placeholder="Feel free to mention it as per your choice!"></textarea>
                     </div>
                 </section>
-                <button type="submit" class="btn d-block m-auto">Submit</button>
+                <button type="submit" class="btn btn-dark waves-effect waves-light d-block m-auto">Submit</button>
             </form>
         </div>
 
@@ -163,11 +163,10 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- The core Firebase JS SDK (is always required and must be listed first) -->
         <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <!-- Adding SDKs for Firebase products that are to be used [ Can be checked here: https://firebase.google.com/docs/web/setup#available-libraries ] -->
         <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
 
