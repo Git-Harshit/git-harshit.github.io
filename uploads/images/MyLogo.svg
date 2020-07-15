@@ -1,0 +1,10 @@
+<svg width="303" height="180" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <rect id="svg_1" height="138" width="48" y="20" x="1" stroke-width="1.5" stroke="#000" fill="#84D3DB" style="stroke-dasharray: 0, 0, 0, 0, 0, 1;"></rect>
+        <rect id="svg_2" height="138" width="48" y="20" x="110" stroke-width="1.5" stroke="#000" fill="#84D3DB" style="stroke-dasharray: 0, 0, 0, 0, 0, 1;"></rect>
+        <rect transform="matrix(0, 1, -1, 0, 225, 66)" stroke="#000" id="svg_3" height="61" width="30" y="115" x="5" fill="#84D3DB" style="stroke-miterlimit: 8; stroke-dasharray: 0, 0, 0, 0, 0, 1;"></rect>
+        <ellipse stroke="#000" ry="69" rx="69" id="svg_4" cy="88" cx="230" stroke-opacity="null" fill="#5B9BA2"></ellipse>
+        <circle style="fill: rgb(0, 188, 212); filter: brightness(.6); stroke-linecap: square; stroke-linejoin: round; stroke: gradient(1);" cx="230.755" cy="88" r="70"></circle>
+        <path style="fill: #FF9800;filter: duotone-filter;" transform="matrix(0.553114, 0, 0, 0.553114, -31.080589, -93)" d="M 604 325 A 130 130 0 1 1 474 194.996 L 474 325 Z" data-bx-shape="pie 474 325 0 130 90.441 360 1@8349f79c"></path>
+    </g>
+</svg>

@@ -59,27 +59,34 @@ try{
         let elems = document.querySelectorAll('.chips');
         let options = {
             limit:Infinity,
-            data: [{
-                tag: 'Web Development',}, { tag: 'Python Programming',}, 
+            data: [
+                { tag: 'Web Development',}, { tag: 'Python Programming',}, 
                 { tag: 'C Programming',}, { tag: 'C++ Programming',}, 
                 { tag: 'HTML',}, { tag: 'CSS',}, { tag: 'JavaScript',}, 
                 { tag: 'Bootstrap',}, { tag: 'Materialize',}, { tag: 'React',}, 
-                { tag: 'Regular Expressions (RegEx)',}, 
+                { tag: 'HandleBars.js',}, { tag: 'AJAX',}, { tag: 'HTTP',}, 
+                { tag: 'Regular Expressions (RegEx)',}, { tag: 'Rasa',}, 
                 { tag: 'GitHub',}, { tag: 'Git',}, 
                 { tag: 'NumPy',}, { tag: 'Pandas',}, { tag: 'Matplotlib',},
                 //{ tag: 'Any Skill',}, 
-                { tag: 'MATLAB',}, { tag: "MS Office"
-                }],
+                { tag: 'MATLAB',}, { tag: "MS Office" }
+                ],
             placeholder: 'Enter a skill',
             secondaryPlaceholder: "+ Type to add more skills",
             autoCompleteOptions: {
                 data: {
                     "Programming":null,
-                    "Developement":null,
+                    "Development":null,
                     'Web Development':null,
                     'Python Programming':null,
                     'C Programming':null, 'C++ Programming':null,
                     'HTML':null, 'CSS':null, 'JavaScript':null, 
+                    'Bootstrap':null, 'Materialize':null, 'React':null, 
+                    'HandleBars.js':null, 'AJAX':null, 'HTTP':null, 
+                    'Regular Expressions (RegEx)':null, 'Git':null, 'GitHub':null, 
+                    'NumPy':null, 'Pandas':null, 'Matplotlib':null, 
+                    'Seaborn':null, 'PyQt':null, 'Flask':null, 
+                    'MATLAB':null, 
                 }
             },
         }

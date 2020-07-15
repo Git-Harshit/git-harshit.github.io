@@ -7,16 +7,19 @@ header#top_section {
 }
 
 /* Styling the scrollbar (currently only for the homepage, in screens larger than 992px) */
-/* @media screen and (min-width:992px) and (min-resolution:96dpi) {    /* 96dpi or dots-per-inch resolution = 1dppx or dots-per-pixel * /
-    ::-webkit-scrollbar-track {
+@media screen and (min-width:992px) and (min-resolution:96dpi) {    /* 96dpi or dots-per-inch resolution = 1dppx or dots-per-pixel */
+    ::-webkit-scrollbar {
         background-color: #000;
         background: linear-gradient(#000000, #fff, #000);
+        width: .5rem;
     }
     ::-webkit-scrollbar-thumb {
-        background: azure;
+        /* background: azure; */
+        background: red;
     }
-} */
+}
 
+/* Top section stylings */
 .greeting {
     font-family:monospace;
     overflow-wrap: break-word;
@@ -70,6 +73,7 @@ header#top_section {
     box-shadow: 0 0 4px white;
 } */
 
+/* Customised animations with @keyframes */
 @-webkit-keyframes arrow-inside-oscillation {
 	from { padding-top: 0; }
 	to 	 { padding-top: 1.05em; }
@@ -89,16 +93,6 @@ header#top_section {
 	from { padding-top: 0; }
 	to 	 { padding-top: 1.05em; }
 }
-
-/* @-webkit-keyframes underline-spread {
-	from {width: 1%;}
-	to {width: 100%;}
-}
-
-@keyframes underline-spread {
-	from {width: 1%;}
-	to {width: 100%;}
-} */
 
 @-o-keyframes launch-and-settle {
 	from, to { transform: translateY(0) rotate(270deg); }
@@ -148,7 +142,6 @@ header#top_section {
 
 .content:hover .head-content::after {
     background: #000;
-    /* animation: underline-spread .75s ease-out 1 forwards; */
     transition: .75s;
     width: 100%;
 }
@@ -182,7 +175,9 @@ header#top_section {
     }
 }
 
+/* My ID Card stylings */
 .name-card-box table.name-card-contents tbody {
+    width: auto;    /* Default value of width, used just to ensure default value in case width:fit-content is not supported */
     width: fit-content;
     display: block;
     margin: auto;
@@ -190,11 +185,14 @@ header#top_section {
 }
 
 .name-card-box table.name-card-contents tbody:hover {
+    box-shadow: 0px 0px 0px 2px #000;
     box-shadow: 0px 0px 0px 2px var(--page-theme);
 }
 
 .image-thumbnail-holder {
+    width: auto;
     width: fit-content;
+    height: auto;
     height: fit-content;
     max-width: 200px;
     padding: .5em;
@@ -208,10 +206,17 @@ header#top_section {
     width: 100%;
 }
 
+/* About Me section stylings */
+.content.about-content .expand-content { 
+    /* cursor: pointer; */
+    pointer-events: none;   /* Disabling any pointer events (including click event) for Read More... for a temporary fix to cancel its reappearance after being re-clicked via JavaScript, a temporary fix to the problem unless a better solution releases */ 
+}
+
 .text-reveal.collapsing {
     display: inline-block;      /* To smoothen collapsing transition of <span> text reveal */
 }
 
+/* Educational Qualification section CSS styles */
 .qualification-section::before {
     content: "";
     background: #000;
@@ -235,17 +240,27 @@ header#top_section {
 .qualification-section > .card {
     margin-left: 10% !important;
     margin-bottom: 2rem;
+    transition: .5s;
 }
 
 .qualification-section:nth-last-child(1) > .card {
     margin-bottom: 2pt;
 }
 
+@media (min-width:768px) {
+    .qualification-section > .card:hover {
+        transform: translateY(-.5vh);
+        box-shadow: 0px 1px 6px 0px;
+    }
+}
+
+/* My Skills chips input stylings */
 .chips input.input {
     width: fit-content !important;
     max-width: 200px;
 }
 
+/* My Quotations carousel stylings */
 .carousel.slide {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.6)), burlywood;
 }
@@ -296,6 +311,7 @@ a[href^="#top"]:focus, a[href^="#top"]:focus-within {
     outline: hidden;
 }
 
+/* Site Footer stylings */
 footer.site-footer{
     text-align: center;
     /* margin-bottom: 2em; */

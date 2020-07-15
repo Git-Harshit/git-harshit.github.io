@@ -22,6 +22,7 @@ _My Web Site_ is solely created to provide a simple website interface from me, t
 
 * [HomePage](https://git-harshit.github.io)
 * [About Page](https://git-harshit.github.io/about)
+* [Feedback Page](https://git-harshit.github.io/feedback)
 
 ### Technologies and Tools Used
 
@@ -33,6 +34,7 @@ _My Web Site_ is solely created to provide a simple website interface from me, t
 * jQuery
 * Font Awesome (Icons)
 * Google Fonts
+* Firebase
 
 ### Development statistics and support
 

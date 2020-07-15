@@ -39,4 +39,9 @@ textarea#message {
     textarea#message {
         min-height: 10rem;
     }
+
+    form button[type="Submit"] {
+        width: 100%;
+    }
+
 }

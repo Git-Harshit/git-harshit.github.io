@@ -15,7 +15,7 @@
         <!-- Setting Page Description -->
         <meta name="description" content="My Personal Website">
         <!-- Setting Page Icon -->
-        <!-- <link rel="icon" href="uploads/images/HKG.jpg" type="image" sizes="16x16 32X32" /> -->
+        <link rel="icon" href="uploads/images/MyLogo.svg" type="image" sizes="16x16 32X32" />
 
         <!-- Compiled and minified Materialize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -42,7 +42,7 @@
                     <ul>
                         <li class="nav-item"><a href="/">Home</a></li>
                         <li class="nav-item"><a href="about.html">About</a></li>
-                        <li class="nav-item"><a href="#feedback.html">Feedback</a></li>
+                        <li class="nav-item"><a href="#feedback">Feedback</a></li>
                         <li class="nav-item">
                             <div class="divider"></div>
                         </li>
@@ -85,7 +85,7 @@
                 </button>
             </article>
             <article class="modal-content">
-                <p>Thank you for considering taking out your precious time to share your feedback with me. I'd be happy to have your honest review/opinion or anything you'd like to convey, and I'll definitely look into it. Please also note that for any technical complaints or bug reports, you can also check for any existing report or open a new issue at its GitHub repository.</p>
+                <p>Thank you for considering taking out your precious time to share your feedback with me. I'd be happy to have your honest review/opinion or anything you'd like to convey, and I'll definitely look into it. Please also note that for any technical complaints or bug reports, you can also check for any existing report or open a new issue at its <a href="https://github.com/Git-Harshit/git-harshit.github.io/issues">GitHub repository</a>.</p>
             </article>
             <article class="modal-footer">
                 <button class="modal-close waves-effect waves-blue-grey btn-flat">Close</button>
@@ -98,27 +98,27 @@
                 <section class="row">
                     <div class="col-md-6">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="">
+                        <input type="text" id="name" placeholder="Enter your Full Name">
                     </div>
                     <div class="col-md-6">
                         <label for="email">E-Mail Address</label>
-                        <input type="email" id="email" placeholder="">
+                        <input type="email" id="email" placeholder="Your mail address">
                     </div>
                     <div class="col-md-6">
                         <label for="phone">Contact Number</label>
-                        <input type="number" id="phone" min="1000000000" max="9999999999" placeholder="">
+                        <input type="number" id="phone" min="1000000000" max="9999999999" placeholder="Enter your contact number">
                     </div>
                     <div class="col-md-6">
                         <label for="phone2">Alternate Contact Number</label>
-                        <input type="number" id="phone2" min="1000000000" max="9999999999" placeholder="">
+                        <input type="number" id="phone2" placeholder="Enter your alternate contact number">
                     </div>
                     <div class="col-12"> 
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="">
+                        <input type="text" id="subject" placeholder="One-Liner for the message">
                     </div>
                     <div class="col-12">
                         <label for="phone2">Message</label>
-                        <textarea name="Message" id="message" cols="30" rows="10" placeholder="Feel free to mention it as per your choice!"></textarea>
+                        <textarea name="Message" id="message" cols="30" rows="10" placeholder="Feel free to mention it as you like ..."></textarea>
                     </div>
                 </section>
                 <button type="submit" class="btn btn-dark waves-effect waves-light d-block m-auto">Submit</button>
@@ -141,7 +141,7 @@
         <!-- Page Specific CSS -->
         <link rel="stylesheet" href="uploads/css/feedback-stylesheet.css" /> 
 
-        <!-- Using Google Fonts, if failed to load via script will throw an error in console -->
+        <!-- Using Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Noticia%20Text&family=Text+Me+One" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Play&display=swap');

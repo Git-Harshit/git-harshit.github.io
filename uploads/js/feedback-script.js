@@ -10,7 +10,7 @@ try{
 
     // Our web app's Firebase configurations
     var firebaseConfig = {
-        apiKey: "AIzaSyCrR1pYvn2MgbLTj__Kb8YKZNY8phidTd0",
+        apiKey: atob("QUl6YVN5Q3JSMXBZdm4yTWdiTFRqX19LYjhZS1pOWThwaGlkVGQw"), // "AIzaSyCrR1pYvn2MgbLTj__Kb8YKZNY8phidTd0",
         authDomain: "data-for-me.firebaseapp.com",
         databaseURL: "https://data-for-me.firebaseio.com",
         projectId: "data-for-me",
@@ -110,7 +110,7 @@ try{
             isLogged = firebaseDataLogger(myForm);
             if (isLogged) {
                 alert("Thank You for your valuable feedback! It'll be looked into, for sure!");
-                // location.reload();  // Not Refreshing the webpage to instantly clear field logs! [Idea Dropped, with Reason: Instant Reload is preventing data submission to Google FireBase, atleast on slower to mid-speed networks]
+                // location.reload();  // Not Refreshing the webpage to instantly clear field logs! [Idea Dropped, with reason: Instant Reload is preventing data submission to Google FireBase, atleast on slower to mid-speed networks]
 
                 // Clearing the individual fields after form submission
                 myForm.name.value     = "" ;
