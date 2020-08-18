@@ -34,6 +34,7 @@ _My Web Site_ is solely created to provide a simple website interface from me, t
 * jQuery
 * Font Awesome (Icons)
 * Google Fonts
+* Google ReCaptcha (v3)
 * Firebase
 
 ### Development statistics and support

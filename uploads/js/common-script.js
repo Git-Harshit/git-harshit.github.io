@@ -16,7 +16,7 @@ try{
     });
     
     // Clear the console (on successfully loading this JS)
-    console.clear();
+    // console.clear();
 
 }
 

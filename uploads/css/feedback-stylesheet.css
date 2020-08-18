@@ -28,11 +28,20 @@ form {
     margin: 1em auto;
 }
 
+input.check:invalid, 
+textarea.check:invalid {
+    /* border-bottom-color: red; */
+    border-bottom-width: 1pt;
+    border-color: red;
+}
+
 textarea#message {
     min-height: 5rem;
     background: transparent;
     /* border: 0; */
     padding: .25em;
+    /* resize:vertical; */
+    resize:none;
 }
 
 @media (max-width:575px) {

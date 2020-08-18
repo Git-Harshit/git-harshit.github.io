@@ -178,6 +178,7 @@ header#top_section {
 /* My ID Card stylings */
 .name-card-box table.name-card-contents tbody {
     width: auto;    /* Default value of width, used just to ensure default value in case width:fit-content is not supported */
+    width: 50%;     /* Approximate value, just works for browsers like IE11 where width:fit-content is not supported */
     width: fit-content;
     display: block;
     margin: auto;

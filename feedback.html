@@ -61,13 +61,13 @@
         <!-- To-do: Main content here (a form atleast is essential), Note: for tech. critics/suggestions, go to github [link to issues page] -->
         <header>
             <div class="main-head">
-                <h1 class="text-center">Feedback Form<!-- <span class="d-none d-md-inline"> Form</span> --></h1>
+                <h1 class="text-center">Feedback Form</h1>
             </div>
         </header>
         
         <!-- Pre-note. Currently appearing as a modal, may be set out at an intro paragraph if content expands in future -->
-        <!-- <section class="modal modal-fixed-footer fade">
-            < !-- <div class="modal-dialog modal-dialog-centered">
+        <section class="modal modal-fixed-footer fade" id="modal1">
+            <!-- <div class="modal-dialog modal-dialog-centered">
                 <article class="modal-header">
                     < !-- Heading Content (with close &times; button) here -- >
                 </article>
@@ -77,10 +77,10 @@
                 <article class="modal-footer">
                     < !-- Footer Content (with close button) here -- >
                 </article>
-            </div> -- >
+            </div> -->
             <article class="modal-header">
                 <h4>Note</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" data-target="modal1" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </article>
@@ -90,7 +90,7 @@
             <article class="modal-footer">
                 <button class="modal-close waves-effect waves-blue-grey btn-flat">Close</button>
             </article>
-        </section> -->
+        </section>
 
         <!-- Main Form -->
         <div class="content form container-fluid">
@@ -98,7 +98,7 @@
                 <section class="row">
                     <div class="col-md-6">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Enter your Full Name">
+                        <input type="text" id="name" placeholder="Enter your full Name">
                     </div>
                     <div class="col-md-6">
                         <label for="email">E-Mail Address</label>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-12"> 
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="One-Liner for the message">
+                        <input type="text" id="subject" placeholder="One line to describe the message">
                     </div>
                     <div class="col-12">
                         <label for="phone2">Message</label>
@@ -126,9 +126,6 @@
         </div>
 
         <footer class="footer page-footer site-footer">
-            <!-- <div class="text-center">
-                Thank You for visiting this page! Have a nice day ahead!&NonBreakingSpace;<span class="ASCII_Emoji"> : ) </span> &nbsp;
-            </div> -->
             <div class="footer-copyright bg-dark">
                 <div class="container">
                     This site is maintained and published by <a href="https://github.com/Git-Harshit">Harshit Gupta.</a>
@@ -162,6 +159,10 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- Loading Google reCaptcha JavaScript API -->
+        <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+        <script src="https://www.google.com/recaptcha/api.js?render=6LffR7sZAAAAACwiJu27CLg19nfSPmFshmUMYXdT" async defer></script>     <!-- renders parameter is reCAPTCHA_site_key -->
 
         <!-- The core Firebase JS SDK (is always required and must be listed first) -->
         <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
