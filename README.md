@@ -7,7 +7,9 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/Git-Harshit/git-harshit.github.io)
 ![GitHub top language](https://img.shields.io/github/languages/top/Git-Harshit/git-harshit.github.io)
 
-_My Web Site_ is solely created to provide a simple website interface from me, that features my information and gets viewers to have a good amount of insight upon me as a reliable human. Stay assured, the information provided on me is real and is true to the best of my knowledge and beliefs.
+_My Web Site_ is solely created to provide a simple website interface from me, that features my information and gets viewers to have a good amount of insight upon me as a reliable human. Stay assured, the information provided on me is real, self-declared and is true to the best of my knowledge and beliefs.
+
+The website is still updated as and when needed. To stay up-to-date with the declared information, please keep an eye on the website, and look for the latest version whenever required.
 
 ---
 

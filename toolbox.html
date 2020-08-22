@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en">
+
+    <head>
+
+        <!-- Page Title -->
+        <title>Simple Toolbox</title>
+
+        <!-- Metadata (data about page data) about character encoding -->
+        <meta charset="UTF-8">    
+        <!-- Letting browser know website is scalable and to be scaled 1x by default to look good on all screens -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+        <!-- Setting Page Theme Color, some browsers use it to change tab color accordingly -->
+        <meta name="theme-color" content="#000">
+        <!-- Setting Page Description -->
+        <meta name="description" content="My Personal Website">
+        <!-- Setting Page Icon -->
+        <link rel="icon" href="uploads/images/MyLogo.svg" type="image" sizes="16x16 32X32" />
+        
+        <!-- Compiled and minified Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Page Specific Internal CSS -->
+        <style>
+
+            .btn {
+                margin: .5em;
+            }
+
+            article.feature-buttons {
+                margin: 2em auto;
+            }
+
+            article.feature-buttons > .featureBox {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            textarea.viewbox {
+                margin: .5em auto;
+                display: block;
+                min-height: 100px;
+                width: 90%;
+                resize: none;
+            }
+
+            .d-none {
+                display: none !important;
+            }
+
+        </style>
+
+        <!-- Common CSS file for all webpages -->
+        <link rel="stylesheet" href="uploads/css/common-stylesheet.css" />
+
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="nav-wrapper orange darken-3">
+                <a href="#" class="brand-logo">HG</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/feedback">Suggest JavaScript</a></li>
+                    <li><a href="#" onclick="window.open('https://github.com/Git-Harshit/git-harshit.github.io/blob/master/toolbox.html')">View Page Source</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section>
+            <h3 class="orange-text text-darken-2 center">My Toolbox</h3>
+        </section>
+
+        <article class="feature-buttons">
+            <div class="featureBox">
+                <a class="waves-effect waves-light btn-large" onclick="location.reload()">Refresh/Reload Page</a>
+                <a class="waves-effect waves-light btn-large" onclick="window.print()">Print Page</a>
+                <a class="waves-effect waves-light btn-large" onclick="history.back();">Go Back</a> 
+            </div>
+            <br>
+            <!-- To-Do: Add disclaimer that we do not log user data! -->
+            <div class="featureBox">
+                <a class="waves-effect waves-light btn" onclick="document.querySelector('#UserKeyLogBox').value = ''; document.querySelector('#UserKeyLogBox').classList.toggle('d-none'); document.onkeypress = (key)=> {document.querySelector('#UserKeyLogBox').value += key.key + ' (Key Code ' + key.keyCode + ' )\n'; console.log(key.keyCode); document.querySelector('#UserKeyLogBox').scrollTop = document.querySelector('#UserKeyLogBox').scrollHeight;}">Key Logger</a>
+                <a class="waves-effect waves-light btn" onclick="document.designMode='on'">Edit/Customize Page Texts</a>
+                <a class="waves-effect waves-light btn" onclick="randomPageRedirect()">Go to Random Page</a>
+                <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="location.href='https://git-harshit.github.io';">Back to Home Page</button> -->   <!-- Couldn't this be done in a footer as well? -->
+            </div>
+            <textarea name="keylogs" id="UserKeyLogBox" rows="25" class="viewbox d-none" readonly="readonly"></textarea>
+        </article>
+
+        <!-- Compiled and minified Materialize JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- Linking common JS file, programmed for all pages in this project -->
+        <script src="uploads/js/common-script.js"></script>
+
+        <!-- Internal (in-page) Script -->
+        <script>
+            let SubPage_URLs = ['index', 'about'];
+            var lower_limit = 0, upper_limit = SubPage_URLs.length-1;
+            function randomPageRedirect() {
+                let random_page_choice = Math.round(Math.random() * (upper_limit - lower_limit) ) + lower_limit; // Math.floor(Math.random());
+                location.href = "./"+SubPage_URLs[random_page_choice] + ".html";
+                console.log("Redirecting to:", SubPage_URLs[random_page_choice]);
+            }
+        </script>
+
+    </body>
+
+</html>

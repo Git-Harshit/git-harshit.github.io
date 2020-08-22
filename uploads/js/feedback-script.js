@@ -33,7 +33,7 @@ try{
         // Keeping a count of valid (non-empty) data entered
         let entry_counts = 0;
 
-        // Data segregation (maybe encrypted in future)
+        // Data segregation (may get encrypted in future)
         name_value = form.name.value;
         email_value = form.email.value;
         phone_value = form.phone.value;
@@ -109,15 +109,16 @@ try{
             var isLogged = 0;
 
             grecaptcha.ready(function() {
-                grecaptcha.render({sitekey:"6LffR7sZAAAAACwiJu27CLg19nfSPmFshmUMYXdT", tabindex:-1});
+                // grecaptcha.render({sitekey:"6LffR7sZAAAAACwiJu27CLg19nfSPmFshmUMYXdT", tabindex:-1});
                 // grecaptcha.getResponse();
                 grecaptcha.execute('6LffR7sZAAAAACwiJu27CLg19nfSPmFshmUMYXdT', {action: 'submit'}).then(function(token) {
+                    let requestURL = `https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`;
                     // console.log("Here's"); // console.log(" your Token:");
                     // console.log(token);
-                    // console.log("Entire URL: " + `https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`);
-                    // window.open(`https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`);    // gives "error-codes": ["timeout-or-duplicate"]
+                    // console.log("Entire URL: " + requestURL);
+                    // window.open(requestURL);    // contains "error-codes": ["timeout-or-duplicate"]
                     // let ajax = new XMLHttpRequest();
-                    // ajax.open("POST", `https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`);
+                    // ajax.open("POST", requestURL);
                     // ajax.onreadystatechange = function (req) {
                     //     if (ajax.readyState == 4) {
                     //         if (ajax.status == 200 || true) {
@@ -127,13 +128,13 @@ try{
                     //         }
                     //     }
                     // }
-                    let data_response = fetch(`https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`, {method:"POST"})
-                                        .then(response => console.log("Here's the response:" + response.text()))
-                                        .then(contents => console.log("contents" + contents))
-                                        .catch(() => console.log("Can’t access URL Response. Possibly blocked by browsers?"));
-                    // data = $.post(`https://www.google.com/recaptcha/api/siteverify?secret=6LffR7sZAAAAAOsRZMKhTqU7hmF7y29vCdwUrFQ2&response=${token}`, {data:null}, function(data, status){console.log(`Data ${data} with status ${status}`);});
+                    // data = $.post(requestURL, {data:null}, function(data, status){console.log(`Data ${data} with status ${status}`);});
                     // console.log(data);
-                    console.log(data_response);
+                    let data_response = fetch(requestURL, { method:"POST", mode:"no-cors" } )
+                                        .then(site_response => { console.log("Here's the response:" + site_response.status + site_response.statusText + JSON.stringify(site_response) + site_response.text() ); } )
+                                        // .then(contents => console.log("contents:" + contents))
+                                        .catch((error) => console.log("Can’t access URL Response. " + "Error:" + error));
+                    // console.log("Data Returned:", data_response);
                     isLogged = firebaseDataLogger(myForm);
                     if (isLogged) {
                         alert("Thank You for your valuable feedback! It'll be looked into, for sure!");
