@@ -1,8 +1,9 @@
 try{
 
     window.addEventListener('load', () => {
-        // To be replaced with a loader
+        // To be replaced with a loader dismissal
         // alert("Page Loaded!");
+        $("#preloader").addClass("loaded");
         console.log("Webpage Loading Complete!");
     });
 
@@ -17,6 +18,15 @@ try{
     
     // Clear the console (on successfully loading this JS)
     // console.clear();
+
+    // Removing the preloader after loading the webpage or after 10 seconds timeout (whichever is earliest)
+    // document.onload = ()=>{
+    //     $("#preloader").addClass("loaded");
+    // }
+    setTimeout(()=>{
+        preloader = document.querySelector("#preloader");
+        if (preloader) preloader.remove();
+    }, 10*1000);
 
 }
 

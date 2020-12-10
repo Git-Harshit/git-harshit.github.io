@@ -27,6 +27,49 @@ body {
     color:#fff;
 }
 
+/* Setting up Pre-Loader and Site Loader */
+/* CSS for Preloader and Loader */
+#preloader:not(.loaded) {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #3b70a6;
+	background: linear-gradient(45deg, #416aa2, #39467b);
+	z-index: 1050;		/* Keep above 1030, to make it cover navbar as well? */
+}
+
+#preloader .loader {
+	color: #FFF;
+	font-size: 2rem;
+    position: relative;
+    font-weight: lighter;
+	word-break: break-word;
+    width: 8rem;
+	height: 1.5em;
+    overflow: hidden;
+	text-align: center;
+}
+
+@keyframes textScrolling {
+    from {
+        top: 0;
+    }
+    to {
+        top: -3rem;
+    }
+}
+
+.absolutePositionedDivisionThatScrollsTheInsideContentUpAndDown {
+    position: absolute;
+    top: 0;
+    animation: textScrolling 1s ease-in-out alternate infinite;
+}
+
+/* CSS Styling Navigation Bar */
 nav{
     position: -webkit-sticky !important;    /* Useful for getting sticky position in Safari Browser */
     position: sticky !important;
@@ -71,6 +114,7 @@ nav ul.right a:hover{
     color: #fff;
 }
 
+/* CSS for .social-links */
 .social-links{
     text-align: center;
 }
@@ -132,7 +176,8 @@ nav ul.right a:hover{
     box-shadow: 0 0 0 .15em rgba(0, 128, 128, 0.45);
 }
 
-.back-to-top{
+/* style customisation for .back-to-top fixed button */
+.back-to-top {
 	position: fixed;
 	bottom: 5%;
 	right: 5%;
@@ -160,6 +205,7 @@ nav ul.right a:hover{
     opacity: 1;
 }
 
+/* Page Footer Style */
 .page-footer{
     color: #000;
     background-color: transparent;
