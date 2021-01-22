@@ -29,6 +29,19 @@
 
     <body>
 
+        <div id="preloader" class="position-fixed d-flex justify-content-center align-items-center"> 		<!-- Page Preloader -->
+            <div class="loader fixBox">
+                <div class="absolutePositionedDivisionAsALoaderContainer">
+                    <div class="loadBar">
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                    </div>
+                    <span class="text-element">Loading</span>
+                </div>
+            </div>
+        </div>
+
         <nav class="nav nav-wrapper navbar-nav sticky-top navbar-dark bg-dark">
             <a class="brand-logo" href="/">HG</a>
             <a data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -68,8 +81,8 @@
             <h4 class="content-subheader">Development</h4>
             <p class="body-content">
                 This website is parked for free here<span class="URL_Box"></span>. The page is kept open-source for anyone to check or
-                contribute to its development and/or further improvements. You can check its repository at GitHub, there you should also
-                be able to clone, follow, fork or star it. 
+                contribute to its development and/or further improvements. You can check its repository at GitHub. There, you should also
+                be able to clone, follow, fork and star it. 
             </p>
             <div class="buttons-toCheck-list">
                 <button class="btn btn-info waves-effect waves-light btn-large" id="github-repo-button"> &lt;/&gt; Check GitHub Repository </button>
@@ -77,9 +90,9 @@
             <br>
             <h4 class="content-subheader">Additional Information</h4>
             <p class="body-content">
-                While this website is made as you're surfing it, anyone is free to use any part of this project, without including any
-                of my personal information.
-                Also, any further improvisations to parts that are to be reused are highly appreciated.
+                While this website is made as you're surfing it, anyone is free to use any part of this project, <mark><em>without including any
+                of my personal information.</em></mark>
+                Also, any further improvisations to parts that are to be reused, are highly appreciated.
                 While copying, make sure that your use will be adhered to GNU GPL (General Public License) v3.0. It is available in the github repository. You can also find it at <a href="https://www.gnu.org/licenses/">GNUs Official Site</a>.
             </p>
         </div>
@@ -87,7 +100,7 @@
         <footer class="footer page-footer site-footer">
             <div class="footer-copyright bg-dark">
                 <div class="container">
-                    This site is maintained and published by <a href="https://github.com/Git-Harshit">Harshit Gupta.</a>
+                    This site is maintained and published by <a href="https://github.com/Git-Harshit" class="text-light">Harshit Gupta</a>.
                     <a class="grey-text text-lighten-4 right" href="https://github.com/Git-Harshit/git-harshit.github.io/blob/master/LICENSE">| License |</a>&nbsp;
                     <a class="grey-text text-lighten-4 right" href="#top">| Back to Top |</a>
                 </div>

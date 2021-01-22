@@ -70,11 +70,16 @@
 
     <body>
 
-        <!-- To be edited further and customised (or improvised) later -->
+        <!-- Page Preloader -->
         <div id="preloader" class="position-fixed d-flex justify-content-center align-items-center"> 		<!-- Page Preloader -->
             <div class="loader fixBox">
-                <div class="absolutePositionedDivisionThatScrollsTheInsideContentUpAndDown TheseClassNamesCanBeRemovedInFuture">
-                    <span class="text-element">Still</span>
+                <div class="absolutePositionedDivisionAsALoaderContainer">
+                    <div class="loadBar">
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                        <div class="loader-dot"></div>
+                    </div>
+                    <!-- <span class="text-element">Still</span> -->
                     <span class="text-element">Loading</span>
                 </div>
             </div>
@@ -295,7 +300,7 @@
             </div>
             <div class="footer-copyright bg-dark">
                 <div class="container">
-                    This site is maintained and published by <a href="https://github.com/Git-Harshit">Harshit Gupta.</a>
+                    This site is maintained and published by <a href="https://github.com/Git-Harshit" class="text-light">Harshit Gupta.</a>
                     <a class="grey-text text-lighten-4 right" href="https://github.com/Git-Harshit/git-harshit.github.io/blob/master/LICENSE">| License |</a>&nbsp;
                     <a class="grey-text text-lighten-4 right" href="#top">| Back to Top |</a>
                 </div>

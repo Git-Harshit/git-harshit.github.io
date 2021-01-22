@@ -60,22 +60,23 @@ try{
         let options = {
             limit:Infinity,
             data: [
-                { tag: 'Web Development',}, { tag: 'Python Programming',}, 
-                { tag: 'C Programming',}, { tag: 'C++ Programming',}, 
-                { tag: 'HTML',}, { tag: 'CSS',}, { tag: 'JavaScript',}, 
-                { tag: 'Bootstrap',}, { tag: 'Materialize',}, { tag: 'React',}, 
-                { tag: 'HandleBars.js',}, { tag: 'AJAX',}, { tag: 'HTTP',}, { tag: 'PHP',}, 
-                { tag: 'Regular Expressions (RegEx)',}, { tag: 'Rasa',}, 
-                { tag: 'GitHub',}, { tag: 'Git',}, 
+                { tag: 'Web Development' }, { tag: 'Python Programming' }, 
+                { tag: 'C Programming' }, { tag: 'C++ Programming' }, 
+                { tag: 'HTML' }, { tag: 'CSS' }, { tag: 'JavaScript' }, 
+                { tag: 'Bootstrap' }, { tag: 'Materialize' }, { tag: 'React' }, 
+                { tag: 'HandleBars.js' }, { tag: 'AJAX' }, { tag: 'HTTP' }, { tag: 'PHP' }, 
+                { tag: 'Regular Expressions (RegEx)' }, { tag: 'Rasa' }, 
+                { tag: 'GitHub' }, { tag: 'Git' }, 
                 { tag: 'NumPy',}, { tag: 'Pandas',}, { tag: 'Matplotlib',},
-                //{ tag: 'Any Skill',}, 
-                { tag: 'MATLAB',}, { tag: "MS Office" }
-                ],
+                //{ tag: 'Any Skill' }, 
+                { tag: 'Robot Operating System (ROS)'}, 
+                { tag: 'MATLAB' }, { tag: "MS Office" }
+            ],
             placeholder: 'Enter a skill',
             secondaryPlaceholder: "+ Type to add more skills",
             autoCompleteOptions: {
                 data: {
-                    "Programming":null,
+                    "Programming":"Programming",
                     "Development":null,
                     'Web Development':null,
                     'Python Programming':null,
