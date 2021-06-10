@@ -63,7 +63,8 @@ try{
                 { tag: 'Web Development' }, { tag: 'Python Programming' }, 
                 { tag: 'C Programming' }, { tag: 'C++ Programming' }, 
                 { tag: 'HTML' }, { tag: 'CSS' }, { tag: 'JavaScript' }, 
-                { tag: 'Bootstrap' }, { tag: 'Materialize' }, { tag: 'React' }, 
+                { tag: 'Bootstrap' }, { tag: 'Materialize' }, 
+                { tag: 'React' }, { tag: 'Node.js' }, { tag: 'ExpressJS' }, 
                 { tag: 'HandleBars.js' }, { tag: 'AJAX' }, { tag: 'HTTP' }, { tag: 'PHP' }, 
                 { tag: 'Regular Expressions (RegEx)' }, { tag: 'Rasa' }, 
                 { tag: 'GitHub' }, { tag: 'Git' }, 
@@ -74,9 +75,10 @@ try{
             ],
             placeholder: 'Enter a skill',
             secondaryPlaceholder: "+ Type to add more skills",
-            autoCompleteOptions: {
+            hasAutocomplete: true,
+            autocompleteOptions: {
                 data: {
-                    "Programming":"Programming",
+                    "Programming":null,     // null is used to indicate that no optional icon string is associated with this autocomplete option
                     "Development":null,
                     'Web Development':null,
                     'Python Programming':null,
@@ -88,7 +90,9 @@ try{
                     'NumPy':null, 'Pandas':null, 'Matplotlib':null, 
                     'Seaborn':null, 'PyQt':null, 'Flask':null, 
                     'MATLAB':null, 
-                }
+                },
+                minLength: 1,
+                limit: 3                    // limiting autocomplete results to be atmost three
             },
         }
         let instances = M.Chips.init(elems, options);
