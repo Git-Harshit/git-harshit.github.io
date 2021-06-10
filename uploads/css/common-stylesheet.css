@@ -117,7 +117,7 @@ body {
 }
 
 /* CSS Styling Navigation Bar */
-nav{
+nav {
     position: -webkit-sticky !important;    /* Useful for getting sticky position in Safari Browser */
     position: sticky !important;
     top:0;
@@ -135,6 +135,10 @@ br {
     -moz-user-select: none;
     -webkit-user-select: none;
     /* pointer-events: none; */
+}
+
+nav .brand-logo:hover {
+    text-shadow: 1px 1px 4px white;    
 }
 
 nav ul a{

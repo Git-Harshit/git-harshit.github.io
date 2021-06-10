@@ -4,7 +4,7 @@ try{
         // To be replaced with a loader dismissal
         // alert("Page Loaded!");
         $("#preloader").addClass("loaded");
-        console.log("Webpage Loading Complete!");
+        // console.log("Webpage Loading Complete!");
     });
 
     // M.AutoInit();        // Initialising all materialize css elements in one go

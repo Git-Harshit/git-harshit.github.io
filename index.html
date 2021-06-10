@@ -51,6 +51,7 @@
             * Animista
             * Anime.js
             * Motion UI (Sass Library)
+            * Any WebGL (Web Graphics Library) library (v2.0)
                         -->
 
         <!-- Common CSS file for all webpages -->
@@ -61,7 +62,7 @@
         <!-- Back-end Includables -->
         <!-- 
             * MongoDB
-            * Node.js
+            * Node.js (with Express API)
             * Meteor.js
             * Django
          -->
@@ -181,8 +182,6 @@
             </p>
         </div>
 
-        <!-- To Add: Any Projects (Optional), Feedback Form (maybe on a dedicated page), ... --> <!-- More to come -->
-
         <!-- Educational Qualification section -->
         <div class="content educational-background">
             <div class="content-head">
@@ -258,7 +257,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="quote-view">
-                            <p>Any possible deed has either already happened or may happen any day, it is better to be prepared accordingly.</p>
+                            <p>The world does not understand the difference between your won't and can't, so if you can, better do it.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -275,6 +274,9 @@
                 </a>
             </div>
         </div>
+
+        <!-- To Add: More of personal information (such as links to other platform profiles, my resume, any Projects (Optional), etc.) could be added in a new ./more page (page name is tentative). Resume and any publicly sharable can also be kept under '/Downloads/' collection. 
+                     Customisation settings are also planned to be implemented (includes dark mode, theme switching, font size adjustments, background setting). -->
 
         <!-- Social Links share -->
         <DIV class="content social-links">
@@ -311,6 +313,21 @@
         <script src="uploads/js/common-script.js"></script>
         <!-- Page Specfic JS File -->
         <script src="uploads/js/index-script.js"></script>
+
+        <!-- Attempt to Register Service Worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                // Declaring serviceWorker scope as current (root), although it must already default to root domain scope (https://git-harshit.github.io), since it is registered here, in ./index page. To be noted, scope option can be only used to further narrow down the scope of serviceWorker than default (current scope). Update: service_worker.js file needs to be used from the root directory of this site, else its scope also gets limited by that directory. Error LOG (when using it from ./uploads/js/): "The path of the provided scope ('/') is not under the max scope allowed ('/uploads/js/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope."
+                navigator.serviceWorker.register('/service_worker.js', {scope: './'}).then(function(registration) {
+                    console.log('Service worker successfully registered, with message (if any) :', registration);
+                    }, function(error) {
+                        console.log('Service worker registration failed, with message (if any):', error);
+                    });
+            } 
+            else {
+                console.log('Service workers are not supported.');
+            }
+        </script>
 
     </body>
 
