@@ -38,6 +38,9 @@ try{
     );
 
     // To-Do: Handle Appropriate Event(s) (such as activate, ...)
+    self.addEventListener("activate", event=>{
+
+    });
 
 }
 
