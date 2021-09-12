@@ -39,7 +39,7 @@ body {
 	right: 0;
 	background-color: #3b70a6;
     background: linear-gradient(45deg, #a9a9aa, #e1dfdd);   /* linear-gradient(45deg, #416aa2, #39467b); */
-	z-index: 1050;		/* Keep above 1030, to make it cover navbar as well? */
+	z-index: 1050;		/* Keep above 1020 (Bootstrap z-index for navbar .sticky-top), to make it cover navbar as well? */
 }
 
 #preloader .loader {
@@ -234,9 +234,8 @@ nav ul.right a:hover{
 	right: 5%;
 	/* font-size: 2em; */
 	opacity: 80%;
-    color: black;
-	color: var(--page-theme);
-    /* mix-blend-mode: difference; */   /* Causing issue with z-index */
+    /* color: black; color: var(--page-theme); */     /* Setting color property has been observed to cause issues with mix-blend-mode functionality on Chrome v93 */
+    mix-blend-mode: difference;
 	z-index: 5;
     display: flex;
 	flex-direction: column;
@@ -247,7 +246,6 @@ nav ul.right a:hover{
 .back-to-top > small.option-indicator-label{
 	font-size: x-small;
     user-select: none;
-    /* visibility: visible; */
     opacity: 0.6;
 }
 

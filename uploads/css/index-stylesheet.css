@@ -151,10 +151,10 @@ header#top_section {
     text-align: justify;
 }
 
-.content .content-body-main {
+/* .content .content-body-main {
     padding: .25em;
     z-index: 1;
-}
+} */
 
 @media (max-width:575px), print {
     .content .content-head .content-pre-head{
@@ -226,7 +226,7 @@ header#top_section {
     height: 1em;
     float: left;
     /* display: inline-block; */
-    transform: translate(-50%, 0%);
+    transform: translate(calc(-50% - 1px), 0%);         /* Here, 1px is 1/2 of 2px, the value set as border-left for .qualification-section which aligns this :before box to the exact middle of its parent border-left */
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
@@ -234,7 +234,7 @@ header#top_section {
     margin-left: 10% !important;
     /* padding-left: 10%; */
     padding-right: .5em;
-    border-left: 1.5px solid !important;
+    border-left: 2px solid !important;
     display: flow-root;
 }
 
