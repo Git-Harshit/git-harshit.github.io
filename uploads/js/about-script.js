@@ -1,7 +1,7 @@
 try{
     // Showing the Current URL of Page
     let URLFeed = document.querySelector(".URL_Box");
-    URLFeed.innerHTML = " (URL: " + "<a href=\"" + document.URL + "\">" + document.URL + "</a>)";
+    URLFeed.innerHTML = " ( " + "<a href=\"" + document.URL.substring(0, document.URL.lastIndexOf('/')) /* document.location.origin should yield same unless the site is hosted on some subdirectory or supath of a domain */ + "\">" + window.location.origin + "</a> )";
 
     let page_URLs = {
         "#github-repo-button":"https://github.com/Git-Harshit/git-harshit.github.io",
