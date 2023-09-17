@@ -6,7 +6,7 @@ try{
 
 	self.addEventListener("install", (event)=>{             // Install event is useful for configuring: opening/reading a cache, cache our files, confirm whether all the required assets are cached or not.
 		console.log("Installing Service Worker");
-		let ResourcesURLsToCache = ['/index.html', '/uploads/css/index_stylesheet.css', '/uploads/js/index_script.js', '/uploads/css/common_stylesheet.css', '/uploads/js/common_script.js'];
+		let ResourcesURLsToCache = ['/index.html', './about.html', '/uploads/css/index-stylesheet.css', '/uploads/js/index-script.js', '/uploads/css/common-stylesheet.css', '/uploads/js/common-script.js', '/uploads/css/about-stylesheet.css', '/uploads/js/about-script.js'];
 
 		event.waitUntil(
 			// This is a chain of promises (caches.open() and cache.addAll()). 
